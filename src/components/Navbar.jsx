@@ -1,11 +1,12 @@
 import React from 'react';
+import logo from '/icar-logo.png';
 
 export const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-success-subtle">
             <div className="container">
                 <a className="navbar-brand d-flex align-items-center" href="#home">
-                    <img src="https://icar.org.in/sites/default/files/2024-06/icar-logo.png" alt="ICAR Logo" className="me-2" style={{ width: '40px' }} />
+                    <img src={logo} alt="ICAR Logo" className="me-2" style={{ width: '40px' }} />
                     <div>
                         <h2 className="mb-0 fs-4">SmartFarm AI</h2>
                         <p className="mb-0 small">Powered by ICAR-IISR</p>
