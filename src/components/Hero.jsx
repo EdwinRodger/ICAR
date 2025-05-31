@@ -1,27 +1,141 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 export const Hero = () => {
+    const heroRef = useRef(null);
+    const titleRef = useRef(null);
+    const subtitleRef = useRef(null);
+    const descriptionRef = useRef(null);
+    const buttonsRef = useRef(null);
+    const imageRef = useRef(null);
+
+    useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Hero section animation
+        const heroTimeline = gsap.timeline();
+        heroTimeline
+            .fromTo(titleRef.current,
+                { y: 50, opacity: 0 },
+                { y: 0, opacity: 1, duration: 0.8, ease: "power2.out" }
+            )
+            .fromTo(subtitleRef.current,
+                { y: 30, opacity: 0 },
+                { y: 0, opacity: 1, duration: 0.8, ease: "power2.out" },
+                "-=0.6"
+            )
+            .fromTo(descriptionRef.current,
+                { y: 30, opacity: 0 },
+                { y: 0, opacity: 1, duration: 0.8, ease: "power2.out" },
+                "-=0.6"
+            )
+            .fromTo(buttonsRef.current,
+                { y: 20, opacity: 0 },
+                { y: 0, opacity: 1, duration: 0.8, ease: "power2.out" },
+                "-=0.6"
+            )
+            .fromTo(imageRef.current,
+                { x: 50, opacity: 0 },
+                { x: 0, opacity: 1, duration: 0.8, ease: "power2.out" },
+                "-=0.6"
+            );
+
+        // Features section animation
+        gsap.fromTo(".feature-card",
+            { y: 50, opacity: 0 },
+            {
+                y: 0,
+                opacity: 1,
+                duration: 0.8,
+                stagger: 0.2,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: "#features",
+                    start: "top 70%",
+                    toggleActions: "play none none reverse"
+                }
+            }
+        );
+
+        // Disease section animation
+        gsap.fromTo("#diseases .col-lg-6",
+            { y: 50, opacity: 0 },
+            {
+                y: 0,
+                opacity: 1,
+                duration: 0.8,
+                stagger: 0.2,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: "#diseases",
+                    start: "top 70%",
+                    toggleActions: "play none none reverse"
+                }
+            }
+        );
+
+        // Weather section animation
+        gsap.fromTo("#weather .card",
+            { y: 50, opacity: 0 },
+            {
+                y: 0,
+                opacity: 1,
+                duration: 0.8,
+                stagger: 0.2,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: "#weather",
+                    start: "top 70%",
+                    toggleActions: "play none none reverse"
+                }
+            }
+        );
+
+        // Crop guide section animation
+        gsap.fromTo("#crops .card",
+            { y: 50, opacity: 0 },
+            {
+                y: 0,
+                opacity: 1,
+                duration: 0.8,
+                stagger: 0.2,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: "#crops",
+                    start: "top 70%",
+                    toggleActions: "play none none reverse"
+                }
+            }
+        );
+
+        return () => {
+            ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+        };
+    }, []);
+
     return (
-        <main>
+        <main ref={heroRef}>
             {/* Hero Section */}
             <section id="home" className="py-5 bg-light">
                 <div className="container">
                     <div className="row align-items-center">
                         <div className="col-lg-6">
-                            <h1 className="display-4 fw-bold text-success mb-3">Your Smart Farming Assistant</h1>
-                            <p className="lead text-success mb-3">AI-Powered Agricultural Solutions</p>
-                            <p className="mb-4">
+                            <h1 ref={titleRef} className="display-4 fw-bold text-success mb-3">Your Smart Farming Assistant</h1>
+                            <p ref={subtitleRef} className="lead text-success mb-3">AI-Powered Agricultural Solutions</p>
+                            <p ref={descriptionRef} className="mb-4">
                                 Get personalized crop recommendations, identify plant diseases instantly,
                                 and access real-time weather forecasts. Make smarter farming decisions
                                 with our comprehensive agricultural toolkit.
                             </p>
-                            <div className="d-flex gap-3">
+                            <div ref={buttonsRef} className="d-flex gap-3">
                                 <a href="#features" className="btn btn-success">Explore Features</a>
                                 <a href="#diseases" className="btn btn-outline-success">Try Disease ID</a>
                             </div>
                         </div>
                         <div className="col-lg-6">
                             <img
+                                ref={imageRef}
                                 src="https://placehold.co/600x400.png"
                                 alt="Smart Farming"
                                 className="img-fluid rounded-3"
@@ -37,7 +151,7 @@ export const Hero = () => {
                     <h2 className="text-center text-success mb-5">Smart Features</h2>
                     <div className="row g-4">
                         <div className="col-md-4">
-                            <div className="card h-100 border-success">
+                            <div className="card h-100 border-success feature-card">
                                 <div className="card-body text-center">
                                     <i className="bi bi-camera display-4 text-success mb-3"></i>
                                     <h3 className="h5">Disease Identification</h3>
@@ -46,7 +160,7 @@ export const Hero = () => {
                             </div>
                         </div>
                         <div className="col-md-4">
-                            <div className="card h-100 border-success">
+                            <div className="card h-100 border-success feature-card">
                                 <div className="card-body text-center">
                                     <i className="bi bi-cloud-sun display-4 text-success mb-3"></i>
                                     <h3 className="h5">Weather Forecast</h3>
@@ -55,7 +169,7 @@ export const Hero = () => {
                             </div>
                         </div>
                         <div className="col-md-4">
-                            <div className="card h-100 border-success">
+                            <div className="card h-100 border-success feature-card">
                                 <div className="card-body text-center">
                                     <i className="bi bi-flower3 display-4 text-success mb-3"></i>
                                     <h3 className="h5">Crop Planning</h3>
