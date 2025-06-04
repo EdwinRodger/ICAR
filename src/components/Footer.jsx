@@ -1,11 +1,71 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 export const Footer = () => {
     const currentYear = new Date().getFullYear();
+    const footerRef = useRef(null);
+    const footerContentRef = useRef(null);
+
+    useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Footer entrance animation
+        gsap.fromTo(footerRef.current,
+            { y: 50, opacity: 0 },
+            {
+                y: 0,
+                opacity: 1,
+                duration: 0.8,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: footerRef.current,
+                    start: "top bottom-=100",
+                    toggleActions: "play none none reverse"
+                }
+            }
+        );
+
+        // Animate footer content
+        gsap.fromTo(footerContentRef.current.children,
+            { y: 30, opacity: 0 },
+            {
+                y: 0,
+                opacity: 1,
+                duration: 0.6,
+                stagger: 0.1,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: footerRef.current,
+                    start: "top bottom-=100",
+                    toggleActions: "play none none reverse"
+                }
+            }
+        );
+
+        // Add hover animation to footer links
+        const footerLinks = footerRef.current.querySelectorAll('a');
+        footerLinks.forEach(link => {
+            link.addEventListener('mouseenter', () => {
+                gsap.to(link, {
+                    x: 5,
+                    duration: 0.3,
+                    ease: "power2.out"
+                });
+            });
+            link.addEventListener('mouseleave', () => {
+                gsap.to(link, {
+                    x: 0,
+                    duration: 0.3,
+                    ease: "power2.out"
+                });
+            });
+        });
+    }, []);
 
     return (
-        <footer className="bg-dark text-light py-5 mt-5">
-            <div className="container">
+        <footer ref={footerRef} className="bg-dark text-light py-5 mt-5">
+            <div ref={footerContentRef} className="container">
                 <div className="row g-4">
                     <div className="col-lg-3 col-md-6">
                         <h3 className="h5 text-success mb-3">SmartFarm AI</h3>
@@ -33,37 +93,27 @@ export const Footer = () => {
                     <div className="col-lg-3 col-md-6">
                         <h3 className="h5 text-success mb-3">Resources</h3>
                         <ul className="list-unstyled">
-                            <li className="mb-2"><a href="#disease-guide" className="text-light text-decoration-none">Disease Guide</a></li>
-                            <li className="mb-2"><a href="#pest-control" className="text-light text-decoration-none">Pest Control</a></li>
-                            <li className="mb-2"><a href="#soil-analysis" className="text-light text-decoration-none">Soil Analysis</a></li>
-                            <li className="mb-2"><a href="#crop-calendar" className="text-light text-decoration-none">Crop Calendar</a></li>
-                            <li className="mb-2"><a href="#market-prices" className="text-light text-decoration-none">Market Prices</a></li>
-                            <li><a href="#farming-tips" className="text-light text-decoration-none">Farming Tips</a></li>
+                            <li className="mb-2"><a href="#blog" className="text-light text-decoration-none">Blog</a></li>
+                            <li className="mb-2"><a href="#faq" className="text-light text-decoration-none">FAQ</a></li>
+                            <li className="mb-2"><a href="#support" className="text-light text-decoration-none">Support</a></li>
+                            <li className="mb-2"><a href="#api" className="text-light text-decoration-none">API Docs</a></li>
+                            <li><a href="#download" className="text-light text-decoration-none">Download App</a></li>
                         </ul>
                     </div>
 
                     <div className="col-lg-3 col-md-6">
                         <h3 className="h5 text-success mb-3">Connect With Us</h3>
-                        <ul className="list-unstyled">
-                            <li className="mb-2">
-                                <a href="https://icar.org.in" target="_blank" rel="noopener noreferrer" className="text-light text-decoration-none">
-                                    ICAR Main Website
-                                </a>
-                            </li>
-                            <li className="mb-2">
-                                <a href="https://krishi.icar.gov.in" target="_blank" rel="noopener noreferrer" className="text-light text-decoration-none">
-                                    Krishi Portal
-                                </a>
-                            </li>
-                            <li className="mb-2">
-                                <a href="https://farmer.gov.in" target="_blank" rel="noopener noreferrer" className="text-light text-decoration-none">
-                                    Farmer Portal
-                                </a>
-                            </li>
-                            <li className="mb-2"><a href="#download-app" className="text-light text-decoration-none">Download App</a></li>
-                            <li className="mb-2"><a href="#newsletter" className="text-light text-decoration-none">Newsletter</a></li>
-                            <li><a href="#support" className="text-light text-decoration-none">Support</a></li>
-                        </ul>
+                        <div className="d-flex gap-3 mb-3">
+                            <a href="#" className="text-light"><i className="bi bi-facebook fs-4"></i></a>
+                            <a href="#" className="text-light"><i className="bi bi-twitter-x fs-4"></i></a>
+                            <a href="#" className="text-light"><i className="bi bi-linkedin fs-4"></i></a>
+                            <a href="#" className="text-light"><i className="bi bi-instagram fs-4"></i></a>
+                        </div>
+                        <p className="small">Subscribe to our newsletter for updates and farming tips.</p>
+                        <div className="input-group">
+                            <input type="email" className="form-control" placeholder="Your email" />
+                            <button className="btn btn-success">Subscribe</button>
+                        </div>
                     </div>
                 </div>
 

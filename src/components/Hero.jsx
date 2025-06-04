@@ -41,7 +41,26 @@ export const Hero = () => {
                 "-=0.6"
             );
 
-        // Features section animation
+        // Add hover animations to buttons
+        const buttons = buttonsRef.current.querySelectorAll('.btn');
+        buttons.forEach(button => {
+            button.addEventListener('mouseenter', () => {
+                gsap.to(button, {
+                    scale: 1.05,
+                    duration: 0.3,
+                    ease: "power2.out"
+                });
+            });
+            button.addEventListener('mouseleave', () => {
+                gsap.to(button, {
+                    scale: 1,
+                    duration: 0.3,
+                    ease: "power2.out"
+                });
+            });
+        });
+
+        // Features section animation with hover effects
         gsap.fromTo(".feature-card",
             { y: 50, opacity: 0 },
             {
@@ -58,7 +77,28 @@ export const Hero = () => {
             }
         );
 
-        // Disease section animation
+        // Add hover animations to feature cards
+        const featureCards = document.querySelectorAll('.feature-card');
+        featureCards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                gsap.to(card, {
+                    y: -10,
+                    boxShadow: "0 10px 20px rgba(0,0,0,0.1)",
+                    duration: 0.3,
+                    ease: "power2.out"
+                });
+            });
+            card.addEventListener('mouseleave', () => {
+                gsap.to(card, {
+                    y: 0,
+                    boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
+                    duration: 0.3,
+                    ease: "power2.out"
+                });
+            });
+        });
+
+        // Disease section animation with hover effects
         gsap.fromTo("#diseases .col-lg-6",
             { y: 50, opacity: 0 },
             {
@@ -75,7 +115,26 @@ export const Hero = () => {
             }
         );
 
-        // Weather section animation
+        // Add hover animations to disease section buttons
+        const diseaseButtons = document.querySelectorAll("#diseases .btn");
+        diseaseButtons.forEach(button => {
+            button.addEventListener('mouseenter', () => {
+                gsap.to(button, {
+                    scale: 1.05,
+                    duration: 0.3,
+                    ease: "power2.out"
+                });
+            });
+            button.addEventListener('mouseleave', () => {
+                gsap.to(button, {
+                    scale: 1,
+                    duration: 0.3,
+                    ease: "power2.out"
+                });
+            });
+        });
+
+        // Weather section animation with hover effects
         gsap.fromTo("#weather .card",
             { y: 50, opacity: 0 },
             {
@@ -92,7 +151,28 @@ export const Hero = () => {
             }
         );
 
-        // Crop guide section animation
+        // Add hover animations to weather cards
+        const weatherCards = document.querySelectorAll("#weather .card");
+        weatherCards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                gsap.to(card, {
+                    y: -10,
+                    boxShadow: "0 10px 20px rgba(0,0,0,0.1)",
+                    duration: 0.3,
+                    ease: "power2.out"
+                });
+            });
+            card.addEventListener('mouseleave', () => {
+                gsap.to(card, {
+                    y: 0,
+                    boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
+                    duration: 0.3,
+                    ease: "power2.out"
+                });
+            });
+        });
+
+        // Crop guide section animation with hover effects
         gsap.fromTo("#crops .card",
             { y: 50, opacity: 0 },
             {
@@ -108,6 +188,27 @@ export const Hero = () => {
                 }
             }
         );
+
+        // Add hover animations to crop cards
+        const cropCards = document.querySelectorAll("#crops .card");
+        cropCards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                gsap.to(card, {
+                    y: -10,
+                    boxShadow: "0 10px 20px rgba(0,0,0,0.1)",
+                    duration: 0.3,
+                    ease: "power2.out"
+                });
+            });
+            card.addEventListener('mouseleave', () => {
+                gsap.to(card, {
+                    y: 0,
+                    boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
+                    duration: 0.3,
+                    ease: "power2.out"
+                });
+            });
+        });
 
         return () => {
             ScrollTrigger.getAll().forEach(trigger => trigger.kill());
