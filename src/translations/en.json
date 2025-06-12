@@ -2,6 +2,9 @@
   "language": {
     "title": "Select Language"
   },
+  "nav": {
+    "home": "Home"
+  },
   "hero": {
     "title": "Your Smart Farming Assistant",
     "subtitle": "AI-Powered Agricultural Solutions",

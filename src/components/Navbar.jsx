@@ -67,7 +67,7 @@ export const Navbar = () => {
                     <div ref={navLinksRef} className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav ms-auto">
                             <li className="nav-item">
-                                <a className="nav-link text-black text-decoration-underline" href="#home"><b>Home</b></a>
+                                <a className="nav-link text-black text-decoration-underline" href="#home"><b>{t('nav.home')}</b></a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link text-black text-decoration-underline" href="#features"><b>{t('features.title')}</b></a>
