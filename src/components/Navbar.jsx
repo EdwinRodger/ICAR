@@ -55,7 +55,7 @@ export const Navbar = () => {
                         <img src={logo} alt="ICAR Logo" className="me-2" style={{ width: '40px' }} />
                         <div>
                             <h2 className="mb-0 fs-4">SmartFarm AI</h2>
-                            <p className="mb-0 small">Powered by ICAR-IISR</p>
+                            <p className="mb-0 small">Powered by ICAR-NSRI</p>
                         </div>
                     </a>
 
