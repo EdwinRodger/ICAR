@@ -35,25 +35,6 @@ export const Navbar = () => {
                 ease: "power2.out"
             }
         );
-
-        // Add hover animation to nav links
-        const navLinks = navLinksRef.current.children;
-        Array.from(navLinks).forEach(link => {
-            link.addEventListener('mouseenter', () => {
-                gsap.to(link, {
-                    scale: 1.05,
-                    duration: 0.3,
-                    ease: "power2.out"
-                });
-            });
-            link.addEventListener('mouseleave', () => {
-                gsap.to(link, {
-                    scale: 1,
-                    duration: 0.3,
-                    ease: "power2.out"
-                });
-            });
-        });
     }, []);
 
     const changeLanguage = (lng) => {
