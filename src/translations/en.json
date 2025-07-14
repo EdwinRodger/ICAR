@@ -6,7 +6,7 @@
     "home": "Home"
   },
   "hero": {
-    "title": "Your Smart Farming Assistant",
+    "title": "Smart Farming Assistant",
     "subtitle": "AI-Powered Agricultural Solutions",
     "description": "Get personalized crop recommendations, identify plant diseases instantly, and access real-time weather forecasts. Make smarter farming decisions with our comprehensive agricultural toolkit.",
     "buttons": {
@@ -17,7 +17,7 @@
   "features": {
     "title": "Smart Features",
     "disease": {
-      "title": "Disease Identification",
+      "title": "Disease Prediction",
       "description": "Upload plant images for instant disease detection and treatment recommendations."
     },
     "weather": {
@@ -25,7 +25,7 @@
       "description": "Get accurate weather predictions and farming advisories for your location."
     },
     "crop": {
-      "title": "Crop Planning",
+      "title": "Drone SOP for Soybean",
       "description": "Receive personalized crop recommendations based on soil and climate data."
     }
   },

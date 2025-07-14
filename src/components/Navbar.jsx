@@ -20,85 +20,137 @@ export const Navbar = () => {
         { code: 'hi', name: 'Hindi', nativeName: 'हिंदी' }
     ];
 
-    useEffect(() => {
-        // Navbar animation
-        gsap.fromTo(
-            navbarRef.current,
-            { y: -100, opacity: 0 },
-            { y: 0, opacity: 1, duration: 1, ease: "power2.out" }
-        );
+    // useEffect(() => {
+    //     // Navbar animation
+    //     gsap.fromTo(
+    //         navbarRef.current,
+    //         { y: -100, opacity: 0 },
+    //         { y: 0, opacity: 1, duration: 1, ease: "power2.out" }
+    //     );
 
-        // Brand animation
-        gsap.fromTo(
-            brandRef.current,
-            { x: -50, opacity: 0 },
-            { x: 0, opacity: 1, duration: 1, ease: "power2.out", delay: 0.5 }
-        );
+    //     // Brand animation
+    //     gsap.fromTo(
+    //         brandRef.current,
+    //         { x: -50, opacity: 0 },
+    //         { x: 0, opacity: 1, duration: 1, ease: "power2.out", delay: 0.5 }
+    //     );
 
-        // Nav links animation
-        gsap.fromTo(
-            navLinksRef.current.children,
-            { y: -20, opacity: 0 },
-            {
-                y: 0,
-                opacity: 1,
-                duration: 0.8,
-                stagger: 0.1,
-                ease: "power2.out",
-                delay: 0.8
-            }
-        );
+    //     // Nav links animation
+    //     if (navLinksRef.current) {
+    //         gsap.fromTo(
+    //             navLinksRef.current.children,
+    //             { y: -20, opacity: 0 },
+    //             {
+    //                 y: 0,
+    //                 opacity: 1,
+    //                 duration: 0.8,
+    //                 stagger: 0.1,
+    //                 ease: "power2.out",
+    //                 delay: 0.8
+    //             }
+    //         );
 
-        // Add hover animation to nav links
-        const navLinks = navLinksRef.current.children;
-        Array.from(navLinks).forEach(link => {
-            link.addEventListener('mouseenter', () => {
-                gsap.to(link, {
-                    scale: 1.05,
-                    duration: 0.3,
-                    ease: "power2.out"
-                });
-            });
-            link.addEventListener('mouseleave', () => {
-                gsap.to(link, {
-                    scale: 1,
-                    duration: 0.3,
-                    ease: "power2.out"
-                });
-            });
-        });
-    }, []);
+    //         // Add hover animation to nav links
+    //         const navLinks = navLinksRef.current.children;
+    //         Array.from(navLinks).forEach(link => {
+    //             link.addEventListener('mouseenter', () => {
+    //                 gsap.to(link, {
+    //                     scale: 1.05,
+    //                     duration: 0.3,
+    //                     ease: "power2.out"
+    //                 });
+    //             });
+    //             link.addEventListener('mouseleave', () => {
+    //                 gsap.to(link, {
+    //                     scale: 1,
+    //                     duration: 0.3,
+    //                     ease: "power2.out"
+    //                 });
+    //             });
+    //         });
+    //     }
+    // }, []);
 
     return (
         <>
-            <nav ref={navbarRef} className="navbar navbar-expand-lg navbar-dark bg-success-subtle">
-                <div className="container">
-                    {/* Logo/Brand - Left */}
-                    <a ref={brandRef} className="navbar-brand d-flex align-items-center" href="#home">
-                        <img src={logo} alt="ICAR Logo" className="me-2" style={{ width: '40px' }} />
-                        <div>
-                            <h2 className="mb-0 fs-4">SmartFarm AI</h2>
-                            <p className="mb-0 small">Powered by ICAR-NSRI</p>
+            {/* Brand/Logo - Always at the top, centered */}
+            <div ref={navbarRef} className="bg-success-subtle py-2">
+                <div className="container d-flex flex-column align-items-center">
+                    <a ref={brandRef} className="d-flex align-items-center justify-content-center" href="#home">
+                        <img src={logo} alt="ICAR Logo" className="me-2" style={{ height: '60px' }} />
+                        <div className="text-center">
+                            <h1 className="mb-0">SmartFarm AI</h1>
+                            <p className="mb-0 small">Developed by ICAR-NSRI & IITI</p>
                         </div>
+                        <img src="https://www.iiti.ac.in/public/themes/iitindore/demos/update-logo.png" alt="IITI Logo" className="ms-2" style={{ height: '60px' }} />
                     </a>
+                </div>
+            </div>
 
+            {/* Links and Translate - md+ screens only */}
+            <nav className="navbar navbar-expand d-none d-md-flex bg-success-subtle border-bottom">
+                <div className="container">
+                    <ul ref={navLinksRef} className="navbar-nav flex-row justify-content-center w-100 mb-2 mb-lg-0">
+                        <li className="nav-item mx-2">
+                            <a className="nav-link text-black text-decoration-underline" href="#home">
+                                <b>{t('nav.home')}</b>
+                            </a>
+                        </li>
+                        <li className="nav-item mx-2">
+                            <a className="nav-link text-black text-decoration-underline" href="#features">
+                                <b>{t('features.title')}</b>
+                            </a>
+                        </li>
+                        <li className="nav-item mx-2">
+                            <a className="nav-link text-black text-decoration-underline" href="#diseases">
+                                <b>{t('diseases.title')}</b>
+                            </a>
+                        </li>
+                        <li className="nav-item mx-2">
+                            <a className="nav-link text-black text-decoration-underline" href="#weather">
+                                <b>{t('weather.title')}</b>
+                            </a>
+                        </li>
+                        <li className="nav-item mx-2">
+                            <a className="nav-link text-black text-decoration-underline" href="#crops">
+                                <b>{t('crops.title')}</b>
+                            </a>
+                        </li>
+                        <li className="nav-item mx-2">
+                            <a className="nav-link text-black text-decoration-underline" href="#contact">
+                                <b>Contact Us</b>
+                            </a>
+                        </li>
+                    </ul>
+                    <button
+                        className="btn btn-outline-success mt-2 d-flex"
+                        type="button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#languageModal"
+                    >
+                        <i className="bi bi-translate me-1"></i>
+                        {languages.find(lang => lang.code === i18n.language)?.nativeName}
+                    </button>
+                </div>
+            </nav>
+
+            {/* Mobile Navbar - sm screens only */}
+            <nav className="navbar navbar-expand-md d-md-none bg-success-subtle border-bottom">
+                <div className="container">
                     {/* Hamburger Menu Button */}
                     <button
-                        className="navbar-toggler"
+                        className="navbar-toggler ms-auto"
                         type="button"
                         data-bs-toggle="collapse"
-                        data-bs-target="#navbarNav"
-                        aria-controls="navbarNav"
+                        data-bs-target="#navbarNavMobile"
+                        aria-controls="navbarNavMobile"
                         aria-expanded="false"
                         aria-label="Toggle navigation"
                     >
                         <span className="navbar-toggler-icon"></span>
                     </button>
-
-                    {/* Navbar Content */}
-                    <div className="collapse navbar-collapse" id="navbarNav">
-                        {/* Navigation Links - Center */}
-                        <ul ref={navLinksRef} className="navbar-nav mx-auto">
+                    <div className="collapse navbar-collapse" id="navbarNavMobile">
+                        <ul className="navbar-nav text-center w-100">
                             <li className="nav-item">
                                 <a className="nav-link text-black text-decoration-underline" href="#home">
                                     <b>{t('nav.home')}</b>
@@ -126,14 +178,12 @@ export const Navbar = () => {
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link text-black text-decoration-underline" href="#contact">
-                                    <b>{t('contact.title')}</b>
+                                    <b>Contact Us</b>
                                 </a>
                             </li>
                         </ul>
-
-                        {/* Language Button - Right */}
                         <button
-                            className="btn btn-outline-success"
+                            className="btn btn-outline-success w-100 mt-2"
                             type="button"
                             data-bs-toggle="modal"
                             data-bs-target="#languageModal"
@@ -171,8 +221,7 @@ export const Navbar = () => {
                                 {languages.map((language) => (
                                     <button
                                         key={language.code}
-                                        className={`list-group-item list-group-item-action ${i18n.language === language.code ? 'active' : ''
-                                            }`}
+                                        className={`list-group-item list-group-item-action ${i18n.language === language.code ? 'active' : ''}`}
                                         onClick={() => changeLanguage(language.code)}
                                         data-bs-dismiss="modal"
                                     >
