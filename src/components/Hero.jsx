@@ -238,8 +238,8 @@ export const Hero = () => {
                                 <a href="#features" className="btn btn-success">
                                     {t('hero.buttons.explore')}
                                 </a>
-                                <a href="#diseases" className="btn btn-outline-success">
-                                    {t('hero.buttons.tryDisease')}
+                                <a href="#" className="btn btn-outline-success">
+                                    Try Features
                                 </a>
                             </div>
                         </div>
@@ -268,7 +268,7 @@ export const Hero = () => {
                                 <div className="card-body text-center">
                                     <i className="bi bi-leaf-fill display-4 text-success mb-3"></i>
                                     <h3 className="h5">{t('features.disease.title')}</h3>
-                                    <p>{t('features.disease.description')}</p>
+                                    <p>Enter your agri field details - Location, Date of Sowing and Crop Variety sown to get disease prediction based on climatic conditions.</p>
                                 </div>
                             </div>
                         </div>
@@ -277,7 +277,7 @@ export const Hero = () => {
                                 <div className="card-body text-center">
                                     <i className="bi bi-bug display-4 text-success mb-3"></i>
                                     <h3 className="h5">Insect Prediction</h3>
-                                    <p>Enter your agri field details-Location, Date of Sowing and Crop Variety sown to get disease prediction based on climatic conditions.</p>
+                                    <p>Enter your agri field details - Location, Date of Sowing and Crop Variety sown to get insect prediction based on climatic conditions.</p>
                                 </div>
                             </div>
                         </div>
@@ -317,37 +317,47 @@ export const Hero = () => {
             {/* Disease Identification Section */}
             <section id="diseases" className="py-5 bg-light">
                 <div className="container">
-                    <h2 className="text-center text-success mb-5">{t('diseases.title')}</h2>
-                    <div className="row align-items-center">
-                        <div className="col-lg-6">
+                    <h2 className="text-center text-success mb-5">Disease and Insect Prediction</h2>
+                    <div className="row align-items-center justify-content-center">
+                        <div className="col-md-3 d-flex justify-content-center mb-4 mb-md-0">
                             <img
-                                src="https://scontent-bom2-3.xx.fbcdn.net/v/t39.30808-6/304910627_440792361412616_7706182859402633115_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=NRybpUgq0YQQ7kNvwFuJZm-&_nc_oc=AdnxrWglSqPFXUQ2yymmnpFErbWxfum_ytom5Thv1vg3OEEX04yb7-Hbc-WVzukin3n8eZDy0d5D2XNYYE3ntUdy&_nc_zt=23&_nc_ht=scontent-bom2-3.xx&_nc_gid=I2rV8pDDZG15JXbui8p91Q&oh=00_AfSZiN71Wo37roZmnexZaNnDTL9_U2KozXJ4r-GKpgidbA&oe=687A9D81"
-                                alt="Disease Identification"
-                                className="img-fluid rounded-3 mb-4 mb-lg-0"
-                                style={{ width: '600px', height: '400px', objectFit: 'fill' }}
+                                src="/rust-2.png"
+                                alt="Rust"
+                                className="img-fluid rounded shadow"
+                                style={{ width: '100%', maxWidth: '300px', height: '350px', objectFit: 'cover' }}
                             />
                         </div>
-                        <div className="col-lg-6">
-                            <h3 className="text-success mb-4">Get Disease Prediction</h3>
-                            <ul className="list-unstyled">
+                        <div className="col-md-6 text-center">
+                            <ul className="list-unstyled mb-4">
                                 <li className="mb-3">
                                     <i className="bi bi-check-circle-fill text-success me-2"></i>
                                     Enter your agri field details - Location, Date of Sowing and Crop Variety sown
                                 </li>
                                 <li className="mb-3">
                                     <i className="bi bi-check-circle-fill text-success me-2"></i>
-                                    Get detailed disease prediction based on climatic conditions
+                                    Get detailed disease and insect prediction based on climatic conditions
                                 </li>
                                 <li className="mb-3">
                                     <i className="bi bi-check-circle-fill text-success me-2"></i>
-                                    Get disease information and treatment recommendations
+                                    Get disease and insect information and treatment recommendations
                                 </li>
                                 <li className="mb-3">
                                     <i className="bi bi-check-circle-fill text-success me-2"></i>
-                                    Get AI expert advice for disease management
+                                    Get AI expert advice for disease and insect management
                                 </li>
                             </ul>
-                            <button className="btn btn-success">Click Here</button>
+                            <div className="d-flex justify-content-center gap-3">
+                                <button className="btn btn-success">Disease Prediction</button>
+                                <button className="btn btn-outline-success">Insect Prediction</button>
+                            </div>
+                        </div>
+                        <div className="col-md-3 d-flex justify-content-center mt-4 mt-md-0">
+                            <img
+                                src="/white-grub.png"
+                                alt="White Grub"
+                                className="img-fluid rounded shadow"
+                                style={{ width: '100%', maxWidth: '300px', height: '350px', objectFit: 'cover' }}
+                            />
                         </div>
                     </div>
                 </div>

@@ -103,12 +103,7 @@ export const Navbar = () => {
                         </li>
                         <li className="nav-item mx-2">
                             <a className="nav-link text-black text-decoration-underline" href="#diseases">
-                                <b>{t('diseases.title')}</b>
-                            </a>
-                        </li>
-                        <li className="nav-item mx-2">
-                            <a className="nav-link text-black text-decoration-underline" href="#weather">
-                                <b>{t('weather.title')}</b>
+                                <b>Disease & Insect Prediction</b>
                             </a>
                         </li>
                         <li className="nav-item mx-2">
