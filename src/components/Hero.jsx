@@ -264,13 +264,15 @@ export const Hero = () => {
                     <h2 className="text-center text-success mb-5">{t('features.title')}</h2>
                     <div className="row g-4 justify-content-center">
                         <div className="col-md-4">
-                            <div className="card h-100 border-success feature-card">
-                                <div className="card-body text-center">
-                                    <i className="bi bi-leaf-fill display-4 text-success mb-3"></i>
-                                    <h3 className="h5">{t('features.disease.title')}</h3>
-                                    <p>{t('features.disease.description')}</p>
+                            <a href="https://google.com" target="_blank">
+                                <div className="card h-100 border-success feature-card">
+                                    <div className="card-body text-center">
+                                        <i className="bi bi-leaf-fill display-4 text-success mb-3"></i>
+                                        <h3 className="h5">{t('features.disease.title')}</h3>
+                                        <p>{t('features.disease.description')}</p>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div className="col-md-4">
                             <div className="card h-100 border-success feature-card">
