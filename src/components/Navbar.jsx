@@ -20,56 +20,56 @@ export const Navbar = () => {
         { code: 'hi', name: 'Hindi', nativeName: 'हिंदी' }
     ];
 
-    // useEffect(() => {
-    //     // Navbar animation
-    //     gsap.fromTo(
-    //         navbarRef.current,
-    //         { y: -100, opacity: 0 },
-    //         { y: 0, opacity: 1, duration: 1, ease: "power2.out" }
-    //     );
+    useEffect(() => {
+        // Navbar animation
+        gsap.fromTo(
+            navbarRef.current,
+            { y: -100, opacity: 0 },
+            { y: 0, opacity: 1, duration: 1, ease: "power2.out" }
+        );
 
-    //     // Brand animation
-    //     gsap.fromTo(
-    //         brandRef.current,
-    //         { x: -50, opacity: 0 },
-    //         { x: 0, opacity: 1, duration: 1, ease: "power2.out", delay: 0.5 }
-    //     );
+        // Brand animation
+        gsap.fromTo(
+            brandRef.current,
+            { x: -50, opacity: 0 },
+            { x: 0, opacity: 1, duration: 1, ease: "power2.out", delay: 0.5 }
+        );
 
-    //     // Nav links animation
-    //     if (navLinksRef.current) {
-    //         gsap.fromTo(
-    //             navLinksRef.current.children,
-    //             { y: -20, opacity: 0 },
-    //             {
-    //                 y: 0,
-    //                 opacity: 1,
-    //                 duration: 0.8,
-    //                 stagger: 0.1,
-    //                 ease: "power2.out",
-    //                 delay: 0.8
-    //             }
-    //         );
+        // Nav links animation
+        if (navLinksRef.current) {
+            gsap.fromTo(
+                navLinksRef.current.children,
+                { y: -20, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 0.8,
+                    stagger: 0.1,
+                    ease: "power2.out",
+                    delay: 0.8
+                }
+            );
 
-    //         // Add hover animation to nav links
-    //         const navLinks = navLinksRef.current.children;
-    //         Array.from(navLinks).forEach(link => {
-    //             link.addEventListener('mouseenter', () => {
-    //                 gsap.to(link, {
-    //                     scale: 1.05,
-    //                     duration: 0.3,
-    //                     ease: "power2.out"
-    //                 });
-    //             });
-    //             link.addEventListener('mouseleave', () => {
-    //                 gsap.to(link, {
-    //                     scale: 1,
-    //                     duration: 0.3,
-    //                     ease: "power2.out"
-    //                 });
-    //             });
-    //         });
-    //     }
-    // }, []);
+            // Add hover animation to nav links
+            const navLinks = navLinksRef.current.children;
+            Array.from(navLinks).forEach(link => {
+                link.addEventListener('mouseenter', () => {
+                    gsap.to(link, {
+                        scale: 1.05,
+                        duration: 0.3,
+                        ease: "power2.out"
+                    });
+                });
+                link.addEventListener('mouseleave', () => {
+                    gsap.to(link, {
+                        scale: 1,
+                        duration: 0.3,
+                        ease: "power2.out"
+                    });
+                });
+            });
+        }
+    }, []);
 
     return (
         <>
@@ -88,7 +88,7 @@ export const Navbar = () => {
             </div>
 
             {/* Links and Translate - md+ screens only */}
-            <nav className="navbar navbar-expand d-none d-md-flex bg-success-subtle border-bottom">
+            <nav ref={navbarRef} className="navbar navbar-expand d-none d-md-flex bg-success-subtle border-bottom">
                 <div className="container">
                     <ul ref={navLinksRef} className="navbar-nav flex-row justify-content-center w-100 mb-2 mb-lg-0">
                         <li className="nav-item mx-2">

@@ -13,210 +13,210 @@ export const Hero = () => {
     const buttonsRef = useRef(null);
     const imageRef = useRef(null);
 
-    // useEffect(() => {
-    //     gsap.registerPlugin(ScrollTrigger);
+    useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
 
-    //     // Hero section animation
-    //     const heroTimeline = gsap.timeline();
-    //     heroTimeline
-    //         .fromTo(titleRef.current,
-    //             { y: 50, opacity: 0 },
-    //             { y: 0, opacity: 1, duration: 0.8, ease: "power2.out" }
-    //         )
-    //         .fromTo(subtitleRef.current,
-    //             { y: 30, opacity: 0 },
-    //             { y: 0, opacity: 1, duration: 0.8, ease: "power2.out" },
-    //             "-=0.6"
-    //         )
-    //         .fromTo(descriptionRef.current,
-    //             { y: 30, opacity: 0 },
-    //             { y: 0, opacity: 1, duration: 0.8, ease: "power2.out" },
-    //             "-=0.6"
-    //         )
-    //         .fromTo(buttonsRef.current,
-    //             { y: 20, opacity: 0 },
-    //             { y: 0, opacity: 1, duration: 0.8, ease: "power2.out" },
-    //             "-=0.6"
-    //         )
-    //         .fromTo(imageRef.current,
-    //             { x: 50, opacity: 0 },
-    //             { x: 0, opacity: 1, duration: 0.8, ease: "power2.out" },
-    //             "-=0.6"
-    //         );
+        // Hero section animation
+        const heroTimeline = gsap.timeline();
+        heroTimeline
+            .fromTo(titleRef.current,
+                { y: 50, opacity: 0 },
+                { y: 0, opacity: 1, duration: 0.8, ease: "power2.out" }
+            )
+            .fromTo(subtitleRef.current,
+                { y: 30, opacity: 0 },
+                { y: 0, opacity: 1, duration: 0.8, ease: "power2.out" },
+                "-=0.6"
+            )
+            .fromTo(descriptionRef.current,
+                { y: 30, opacity: 0 },
+                { y: 0, opacity: 1, duration: 0.8, ease: "power2.out" },
+                "-=0.6"
+            )
+            .fromTo(buttonsRef.current,
+                { y: 20, opacity: 0 },
+                { y: 0, opacity: 1, duration: 0.8, ease: "power2.out" },
+                "-=0.6"
+            )
+            .fromTo(imageRef.current,
+                { x: 50, opacity: 0 },
+                { x: 0, opacity: 1, duration: 0.8, ease: "power2.out" },
+                "-=0.6"
+            );
 
-    //     // Add hover animations to buttons
-    //     const buttons = buttonsRef.current.querySelectorAll('.btn');
-    //     buttons.forEach(button => {
-    //         button.addEventListener('mouseenter', () => {
-    //             gsap.to(button, {
-    //                 scale: 1.05,
-    //                 duration: 0.3,
-    //                 ease: "power2.out"
-    //             });
-    //         });
-    //         button.addEventListener('mouseleave', () => {
-    //             gsap.to(button, {
-    //                 scale: 1,
-    //                 duration: 0.3,
-    //                 ease: "power2.out"
-    //             });
-    //         });
-    //     });
+        // Add hover animations to buttons
+        const buttons = buttonsRef.current.querySelectorAll('.btn');
+        buttons.forEach(button => {
+            button.addEventListener('mouseenter', () => {
+                gsap.to(button, {
+                    scale: 1.05,
+                    duration: 0.3,
+                    ease: "power2.out"
+                });
+            });
+            button.addEventListener('mouseleave', () => {
+                gsap.to(button, {
+                    scale: 1,
+                    duration: 0.3,
+                    ease: "power2.out"
+                });
+            });
+        });
 
-    //     // Features section animation with hover effects
-    //     gsap.fromTo(".feature-card",
-    //         { y: 50, opacity: 0 },
-    //         {
-    //             y: 0,
-    //             opacity: 1,
-    //             duration: 0.8,
-    //             stagger: 0.2,
-    //             ease: "power2.out",
-    //             scrollTrigger: {
-    //                 trigger: "#features",
-    //                 start: "top 70%",
-    //                 toggleActions: "play none none reverse"
-    //             }
-    //         }
-    //     );
+        // Features section animation with hover effects
+        gsap.fromTo(".feature-card",
+            { y: 50, opacity: 0 },
+            {
+                y: 0,
+                opacity: 1,
+                duration: 0.8,
+                stagger: 0.2,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: "#features",
+                    start: "top 70%",
+                    toggleActions: "play none none reverse"
+                }
+            }
+        );
 
-    //     // Add hover animations to feature cards
-    //     const featureCards = document.querySelectorAll('.feature-card');
-    //     featureCards.forEach(card => {
-    //         card.addEventListener('mouseenter', () => {
-    //             gsap.to(card, {
-    //                 y: -10,
-    //                 boxShadow: "0 10px 20px rgba(0,0,0,0.1)",
-    //                 duration: 0.3,
-    //                 ease: "power2.out"
-    //             });
-    //         });
-    //         card.addEventListener('mouseleave', () => {
-    //             gsap.to(card, {
-    //                 y: 0,
-    //                 boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
-    //                 duration: 0.3,
-    //                 ease: "power2.out"
-    //             });
-    //         });
-    //     });
+        // Add hover animations to feature cards
+        const featureCards = document.querySelectorAll('.feature-card');
+        featureCards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                gsap.to(card, {
+                    y: -10,
+                    boxShadow: "0 10px 20px rgba(0,0,0,0.1)",
+                    duration: 0.3,
+                    ease: "power2.out"
+                });
+            });
+            card.addEventListener('mouseleave', () => {
+                gsap.to(card, {
+                    y: 0,
+                    boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
+                    duration: 0.3,
+                    ease: "power2.out"
+                });
+            });
+        });
 
-    //     // Disease section animation with hover effects
-    //     gsap.fromTo("#diseases .col-lg-6",
-    //         { y: 50, opacity: 0 },
-    //         {
-    //             y: 0,
-    //             opacity: 1,
-    //             duration: 0.8,
-    //             stagger: 0.2,
-    //             ease: "power2.out",
-    //             scrollTrigger: {
-    //                 trigger: "#diseases",
-    //                 start: "top 70%",
-    //                 toggleActions: "play none none reverse"
-    //             }
-    //         }
-    //     );
+        // Disease section animation with hover effects
+        gsap.fromTo("#diseases .col-lg-6",
+            { y: 50, opacity: 0 },
+            {
+                y: 0,
+                opacity: 1,
+                duration: 0.8,
+                stagger: 0.2,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: "#diseases",
+                    start: "top 70%",
+                    toggleActions: "play none none reverse"
+                }
+            }
+        );
 
-    //     // Add hover animations to disease section buttons
-    //     const diseaseButtons = document.querySelectorAll("#diseases .btn");
-    //     diseaseButtons.forEach(button => {
-    //         button.addEventListener('mouseenter', () => {
-    //             gsap.to(button, {
-    //                 scale: 1.05,
-    //                 duration: 0.3,
-    //                 ease: "power2.out"
-    //             });
-    //         });
-    //         button.addEventListener('mouseleave', () => {
-    //             gsap.to(button, {
-    //                 scale: 1,
-    //                 duration: 0.3,
-    //                 ease: "power2.out"
-    //             });
-    //         });
-    //     });
+        // Add hover animations to disease section buttons
+        const diseaseButtons = document.querySelectorAll("#diseases .btn");
+        diseaseButtons.forEach(button => {
+            button.addEventListener('mouseenter', () => {
+                gsap.to(button, {
+                    scale: 1.05,
+                    duration: 0.3,
+                    ease: "power2.out"
+                });
+            });
+            button.addEventListener('mouseleave', () => {
+                gsap.to(button, {
+                    scale: 1,
+                    duration: 0.3,
+                    ease: "power2.out"
+                });
+            });
+        });
 
-    //     // Weather section animation with hover effects
-    //     // gsap.fromTo("#weather .card",
-    //     //     { y: 50, opacity: 0 },
-    //     //     {
-    //     //         y: 0,
-    //     //         opacity: 1,
-    //     //         duration: 0.8,
-    //     //         stagger: 0.2,
-    //     //         ease: "power2.out",
-    //     //         scrollTrigger: {
-    //     //             trigger: "#weather",
-    //     //             start: "top 70%",
-    //     //             toggleActions: "play none none reverse"
-    //     //         }
-    //     //     }
-    //     // );
+        // Weather section animation with hover effects
+        // gsap.fromTo("#weather .card",
+        //     { y: 50, opacity: 0 },
+        //     {
+        //         y: 0,
+        //         opacity: 1,
+        //         duration: 0.8,
+        //         stagger: 0.2,
+        //         ease: "power2.out",
+        //         scrollTrigger: {
+        //             trigger: "#weather",
+        //             start: "top 70%",
+        //             toggleActions: "play none none reverse"
+        //         }
+        //     }
+        // );
 
-    //     // Add hover animations to weather cards
-    //     const weatherCards = document.querySelectorAll("#weather .card");
-    //     weatherCards.forEach(card => {
-    //         card.addEventListener('mouseenter', () => {
-    //             gsap.to(card, {
-    //                 y: -10,
-    //                 boxShadow: "0 10px 20px rgba(0,0,0,0.1)",
-    //                 duration: 0.3,
-    //                 ease: "power2.out"
-    //             });
-    //         });
-    //         card.addEventListener('mouseleave', () => {
-    //             gsap.to(card, {
-    //                 y: 0,
-    //                 boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
-    //                 duration: 0.3,
-    //                 ease: "power2.out"
-    //             });
-    //         });
-    //     });
+        // Add hover animations to weather cards
+        const weatherCards = document.querySelectorAll("#weather .card");
+        weatherCards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                gsap.to(card, {
+                    y: -10,
+                    boxShadow: "0 10px 20px rgba(0,0,0,0.1)",
+                    duration: 0.3,
+                    ease: "power2.out"
+                });
+            });
+            card.addEventListener('mouseleave', () => {
+                gsap.to(card, {
+                    y: 0,
+                    boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
+                    duration: 0.3,
+                    ease: "power2.out"
+                });
+            });
+        });
 
-    //     // Crop guide section animation with hover effects
-    //     gsap.fromTo("#crops .card",
-    //         { y: 50, opacity: 0 },
-    //         {
-    //             y: 0,
-    //             opacity: 1,
-    //             duration: 0.8,
-    //             stagger: 0.2,
-    //             ease: "power2.out",
-    //             scrollTrigger: {
-    //                 trigger: "#crops",
-    //                 start: "top 70%",
-    //                 toggleActions: "play none none reverse"
-    //             }
-    //         }
-    //     );
+        // Crop guide section animation with hover effects
+        gsap.fromTo("#crops .card",
+            { y: 50, opacity: 0 },
+            {
+                y: 0,
+                opacity: 1,
+                duration: 0.8,
+                stagger: 0.2,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: "#crops",
+                    start: "top 70%",
+                    toggleActions: "play none none reverse"
+                }
+            }
+        );
 
-    //     // Add hover animations to crop cards
-    //     const cropCards = document.querySelectorAll("#crops .card");
-    //     cropCards.forEach(card => {
-    //         card.addEventListener('mouseenter', () => {
-    //             gsap.to(card, {
-    //                 y: -10,
-    //                 boxShadow: "0 10px 20px rgba(0,0,0,0.1)",
-    //                 duration: 0.3,
-    //                 ease: "power2.out"
-    //             });
-    //         });
-    //         card.addEventListener('mouseleave', () => {
-    //             gsap.to(card, {
-    //                 y: 0,
-    //                 boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
-    //                 duration: 0.3,
-    //                 ease: "power2.out"
-    //             });
-    //         });
-    //     });
+        // Add hover animations to crop cards
+        const cropCards = document.querySelectorAll("#crops .card");
+        cropCards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                gsap.to(card, {
+                    y: -10,
+                    boxShadow: "0 10px 20px rgba(0,0,0,0.1)",
+                    duration: 0.3,
+                    ease: "power2.out"
+                });
+            });
+            card.addEventListener('mouseleave', () => {
+                gsap.to(card, {
+                    y: 0,
+                    boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
+                    duration: 0.3,
+                    ease: "power2.out"
+                });
+            });
+        });
 
-    //     return () => {
-    //         ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-    //     };
-    // }, []);
+        return () => {
+            ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+        };
+    }, []);
 
     return (
         <main ref={heroRef}>

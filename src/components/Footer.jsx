@@ -7,61 +7,61 @@ export const Footer = () => {
     const footerRef = useRef(null);
     const footerContentRef = useRef(null);
 
-    // useEffect(() => {
-    //     gsap.registerPlugin(ScrollTrigger);
+    useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
 
-    //     // Footer entrance animation
-    //     gsap.fromTo(footerRef.current,
-    //         { y: 50, opacity: 0 },
-    //         {
-    //             y: 0,
-    //             opacity: 1,
-    //             duration: 0.8,
-    //             ease: "power2.out",
-    //             scrollTrigger: {
-    //                 trigger: footerRef.current,
-    //                 start: "top bottom-=100",
-    //                 toggleActions: "play none none reverse"
-    //             }
-    //         }
-    //     );
+        // Footer entrance animation
+        gsap.fromTo(footerRef.current,
+            { y: 50, opacity: 0 },
+            {
+                y: 0,
+                opacity: 1,
+                duration: 0.8,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: footerRef.current,
+                    start: "top bottom-=100",
+                    toggleActions: "play none none reverse"
+                }
+            }
+        );
 
-    //     // Animate footer content
-    //     gsap.fromTo(footerContentRef.current.children,
-    //         { y: 30, opacity: 0 },
-    //         {
-    //             y: 0,
-    //             opacity: 1,
-    //             duration: 0.6,
-    //             stagger: 0.1,
-    //             ease: "power2.out",
-    //             scrollTrigger: {
-    //                 trigger: footerRef.current,
-    //                 start: "top bottom-=100",
-    //                 toggleActions: "play none none reverse"
-    //             }
-    //         }
-    //     );
+        // Animate footer content
+        gsap.fromTo(footerContentRef.current.children,
+            { y: 30, opacity: 0 },
+            {
+                y: 0,
+                opacity: 1,
+                duration: 0.6,
+                stagger: 0.1,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: footerRef.current,
+                    start: "top bottom-=100",
+                    toggleActions: "play none none reverse"
+                }
+            }
+        );
 
-    //     // Add hover animation to footer links
-    //     const footerLinks = footerRef.current.querySelectorAll('a');
-    //     footerLinks.forEach(link => {
-    //         link.addEventListener('mouseenter', () => {
-    //             gsap.to(link, {
-    //                 x: 5,
-    //                 duration: 0.3,
-    //                 ease: "power2.out"
-    //             });
-    //         });
-    //         link.addEventListener('mouseleave', () => {
-    //             gsap.to(link, {
-    //                 x: 0,
-    //                 duration: 0.3,
-    //                 ease: "power2.out"
-    //             });
-    //         });
-    //     });
-    // }, []);
+        // Add hover animation to footer links
+        const footerLinks = footerRef.current.querySelectorAll('a');
+        footerLinks.forEach(link => {
+            link.addEventListener('mouseenter', () => {
+                gsap.to(link, {
+                    x: 5,
+                    duration: 0.3,
+                    ease: "power2.out"
+                });
+            });
+            link.addEventListener('mouseleave', () => {
+                gsap.to(link, {
+                    x: 0,
+                    duration: 0.3,
+                    ease: "power2.out"
+                });
+            });
+        });
+    }, []);
 
     return (
         <footer ref={footerRef} className="bg-dark text-light py-5">
