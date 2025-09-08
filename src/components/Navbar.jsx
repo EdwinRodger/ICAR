@@ -80,7 +80,7 @@ export const Navbar = () => {
                         <img src={logo} alt="ICAR Logo" className="me-2" style={{ height: '60px' }} />
                         <div className="text-center">
                             <h1 className="mb-0">SmartFarm AI</h1>
-                            <p className="mb-0 small">Developed by ICAR-NSRI & IITI</p>
+                            <p className="mb-0 small">Developed by ICAR-NSRI & IITI under AgriHub Project</p>
                         </div>
                         <img src="https://www.iiti.ac.in/public/themes/iitindore/demos/update-logo.png" alt="IITI Logo" className="ms-2" style={{ height: '60px' }} />
                     </a>
@@ -124,7 +124,7 @@ export const Navbar = () => {
                         data-bs-target="#languageModal"
                     >
                         <i className="bi bi-translate me-1"></i>
-                        {languages.find(lang => lang.code === i18n.language)?.nativeName}
+                        हिंदी
                     </button>
                 </div>
             </nav>
@@ -184,7 +184,7 @@ export const Navbar = () => {
                             data-bs-target="#languageModal"
                         >
                             <i className="bi bi-translate me-1"></i>
-                            {languages.find(lang => lang.code === i18n.language)?.nativeName}
+                            हिंदी
                         </button>
                     </div>
                 </div>
