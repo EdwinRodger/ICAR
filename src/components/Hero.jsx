@@ -419,7 +419,7 @@ export const Hero = () => {
                             <div className="card h-100 border-success">
                                 <div className="ratio ratio-1x1 card-img-top" style={{ overflow: 'hidden' }}>
                                     <img
-                                        src="https://scontent-bom2-1.xx.fbcdn.net/v/t39.30808-6/517019122_1153166483508530_7455421039899486734_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_ohc=RyU58n2qeEUQ7kNvwFG4maV&_nc_oc=AdlK86xaQcsuuYN251YwYxHC_lkS5PcHXpsFwAr7gVUoI722jQXu8exf3q28VsmjH8KJ2MOFkEnqyzdTmQ_yDkqu&_nc_zt=23&_nc_ht=scontent-bom2-1.xx&_nc_gid=eYlniToJ8HzJ9IioqLuc5w&oh=00_AfRw_t61gncmDhVd3nwIp14W23kVw8KeD3xnXsW3zWB5pA&oe=687A9049"
+                                        src="/CA.png"
                                         alt="Crop Advisory"
                                         style={{ objectFit: 'cover', width: '100%', height: '100%' }}
                                     />
@@ -434,7 +434,7 @@ export const Hero = () => {
                             <div className="card h-100 border-success">
                                 <div className="ratio ratio-1x1 card-img-top" style={{ overflow: 'hidden' }}>
                                     <img
-                                        src="https://scontent-bom1-2.xx.fbcdn.net/v/t39.30808-6/514665519_1149181580573687_2482724923229874791_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_ohc=okT6wZikbmgQ7kNvwEQwZyX&_nc_oc=AdmAyD56KExyU-qWgMcaqoKlXSwD7ztnR9JZL-0u-hKPDhZl7XejDE7HKrdhtHsjrGyGJNC2nIR5406Zmnz7HXu6&_nc_zt=23&_nc_ht=scontent-bom1-2.xx&_nc_gid=BTg1p_zEz2FZ3-kT5ElEnA&oh=00_AfQ78brq1jRSlxjU0v2L0y2JFYvwS-q9k2FYDdl5gbEc0w&oe=687AA089"
+                                        src="/PoP.png"
                                         alt="Recommended Package of Practice"
                                         style={{ objectFit: 'cover', width: '100%', height: '100%' }}
                                     />
