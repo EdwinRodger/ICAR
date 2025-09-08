@@ -103,7 +103,7 @@ export const Navbar = () => {
                         </li>
                         <li className="nav-item mx-2">
                             <a className="nav-link text-black text-decoration-underline" href="#diseases">
-                                <b>Disease & Insect Prediction</b>
+                                <b>{t('diseases.title')}</b>
                             </a>
                         </li>
                         <li className="nav-item mx-2">
@@ -113,7 +113,7 @@ export const Navbar = () => {
                         </li>
                         <li className="nav-item mx-2">
                             <a className="nav-link text-black text-decoration-underline" href="#contact">
-                                <b>Contact Us</b>
+                                <b>{t('contact.title')}</b>
                             </a>
                         </li>
                     </ul>
@@ -173,7 +173,7 @@ export const Navbar = () => {
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link text-black text-decoration-underline" href="#contact">
-                                    <b>Contact Us</b>
+                                    <b>{t('contact.title')}</b>
                                 </a>
                             </li>
                         </ul>

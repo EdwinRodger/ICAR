@@ -20,13 +20,21 @@
       "title": "Disease Prediction",
       "description": "Upload plant images for instant disease detection and treatment recommendations."
     },
+    "insect": {
+      "title": "Insect Prediction",
+      "description": "Enter your field details to get insect prediction based on climate."
+    },
     "weather": {
       "title": "Weather Forecast",
       "description": "Get accurate weather predictions and farming advisories for your location."
     },
     "crop": {
       "title": "Drone SOP for Soybean",
-      "description": "Receive personalized crop recommendations based on soil and climate data."
+      "description": "Get Standard Operating Procedure (SOP) for drone spraying in Soybean"
+    },
+    "chatbot": {
+      "title": "AI Chat Bot",
+      "description": "Get expert guidance powered by AI"
     }
   },
   "diseases": {
@@ -58,6 +66,14 @@
   },
   "crops": {
     "title": "Smart Crop Planning",
+    "advisory": {
+      "title": "Crop Advisory",
+      "description": "Get farmer advisory compiled by ICAR-NSRI experts based on weather forecasts"
+    },
+    "pop": {
+      "title": "Recommended Package of Practice",
+      "description": "Scientific recommendations from multi-location research projects by ICAR-NSRI"
+    },
     "selection": {
       "title": "Crop Selection",
       "description": "Get personalized crop recommendations based on your soil type and local climate."
@@ -67,8 +83,8 @@
       "description": "Access detailed growing instructions and best practices for your selected crops."
     },
     "market": {
-      "title": "Market Insights",
-      "description": "Stay informed about market trends and demand for your crops."
+      "title": "Market Trends",
+      "description": "Stay informed about market trends and current mandi rates"
     }
   },
   "contact": {

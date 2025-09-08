@@ -229,7 +229,7 @@ export const Hero = () => {
                                 {t('hero.title')}
                             </h1>
                             <p ref={subtitleRef} className="lead text-success mb-3">
-                                Integrated smart decision support system for precision soybean farming
+                                {t('hero.subtitle')}
                             </p>
                             <p ref={descriptionRef} className="mb-4">
                                 {t('hero.description')}
@@ -239,7 +239,7 @@ export const Hero = () => {
                                     {t('hero.buttons.explore')}
                                 </a>
                                 <a href="#" className="btn btn-outline-success">
-                                    Try Features
+                                    {t('hero.buttons.tryDisease')}
                                 </a>
                             </div>
                         </div>
@@ -268,7 +268,7 @@ export const Hero = () => {
                                 <div className="card-body text-center">
                                     <i className="bi bi-leaf-fill display-4 text-success mb-3"></i>
                                     <h3 className="h5">{t('features.disease.title')}</h3>
-                                    <p>Enter your agri field details - Location, Date of Sowing and Crop Variety sown to get disease prediction based on climatic conditions.</p>
+                                    <p>{t('features.disease.description')}</p>
                                 </div>
                             </div>
                         </div>
@@ -276,8 +276,8 @@ export const Hero = () => {
                             <div className="card h-100 border-success feature-card">
                                 <div className="card-body text-center">
                                     <i className="bi bi-bug display-4 text-success mb-3"></i>
-                                    <h3 className="h5">Insect Prediction</h3>
-                                    <p>Enter your agri field details - Location, Date of Sowing and Crop Variety sown to get insect prediction based on climatic conditions.</p>
+                                    <h3 className="h5">{t('features.insect.title')}</h3>
+                                    <p>{t('features.insect.description')}</p>
                                 </div>
                             </div>
                         </div>
@@ -296,8 +296,8 @@ export const Hero = () => {
                                     <div className="d-flex justify-content-center mb-3">
                                         <img src="/drone-green.png" alt="Drone SOP" className="img-fluid display-4 text-success" style={{ width: '56px', height: '56px', objectFit: 'contain' }} />
                                     </div>
-                                    <h3 className="h5">Drone SOP for Soybean</h3>
-                                    <p>Get Standard Operating Procedure (SOP) for drone spraying in Soybean Crop</p>
+                                    <h3 className="h5">{t('features.crop.title')}</h3>
+                                    <p>{t('features.crop.description')}</p>
                                 </div>
                             </div>
                         </div>
@@ -305,8 +305,8 @@ export const Hero = () => {
                             <div className="card h-100 border-success feature-card">
                                 <div className="card-body text-center">
                                     <i className="bi bi-robot display-4 text-success mb-3"></i>
-                                    <h3 className="h5">AI Chat Bot</h3>
-                                    <p>Get expert guidance powered by AI</p>
+                                    <h3 className="h5">{t('features.chatbot.title')}</h3>
+                                    <p>{t('features.chatbot.description')}</p>
                                 </div>
                             </div>
                         </div>
@@ -317,7 +317,7 @@ export const Hero = () => {
             {/* Disease Identification Section */}
             <section id="diseases" className="py-5 bg-light">
                 <div className="container">
-                    <h2 className="text-center text-success mb-5">Disease and Insect Prediction</h2>
+                    <h2 className="text-center text-success mb-5">{t('diseases.title')}</h2>
                     <div className="row align-items-center justify-content-center">
                         <div className="col-md-3 d-flex justify-content-center mb-4 mb-md-0">
                             <img
@@ -331,24 +331,24 @@ export const Hero = () => {
                             <ul className="list-unstyled mb-4">
                                 <li className="mb-3">
                                     <i className="bi bi-check-circle-fill text-success me-2"></i>
-                                    Enter your agri field details - Location, Date of Sowing and Crop Variety sown
+                                    {t('diseases.features.upload')}
                                 </li>
                                 <li className="mb-3">
                                     <i className="bi bi-check-circle-fill text-success me-2"></i>
-                                    Get detailed disease and insect prediction based on climatic conditions
+                                    {t('diseases.features.info')}
                                 </li>
                                 <li className="mb-3">
                                     <i className="bi bi-check-circle-fill text-success me-2"></i>
-                                    Get disease and insect information and treatment recommendations
+                                    {t('diseases.features.treatment')}
                                 </li>
                                 <li className="mb-3">
                                     <i className="bi bi-check-circle-fill text-success me-2"></i>
-                                    Get AI expert advice for disease and insect management
+                                    {t('diseases.features.prevention')}
                                 </li>
                             </ul>
                             <div className="d-flex justify-content-center gap-3">
-                                <button className="btn btn-success">Disease Prediction</button>
-                                <button className="btn btn-outline-success">Insect Prediction</button>
+                                <button className="btn btn-success">{t('features.disease.title')}</button>
+                                <button className="btn btn-outline-success">{t('features.insect.title')}</button>
                             </div>
                         </div>
                         <div className="col-md-3 d-flex justify-content-center mt-4 mt-md-0">
@@ -425,8 +425,8 @@ export const Hero = () => {
                                     />
                                 </div>
                                 <div className="card-body">
-                                    <h3 className="h5 text-success">Crop Advisory</h3>
-                                    <p>Get farmer advisory compiled by expert scientists team of ICAR-NSRI as per weather forecast</p>
+                                    <h3 className="h5 text-success">{t('crops.advisory.title')}</h3>
+                                    <p>{t('crops.advisory.description')}</p>
                                 </div>
                             </div>
                         </div>
@@ -440,8 +440,8 @@ export const Hero = () => {
                                     />
                                 </div>
                                 <div className="card-body">
-                                    <h3 className="h5 text-success">Recommended Package of Practice</h3>
-                                    <p>Scientific recommendations generated under multi-locational research projects conducted by ICAR-NSRI</p>
+                                    <h3 className="h5 text-success">{t('crops.pop.title')}</h3>
+                                    <p>{t('crops.pop.description')}</p>
                                 </div>
                             </div>
                         </div>
@@ -455,8 +455,8 @@ export const Hero = () => {
                                     />
                                 </div>
                                 <div className="card-body">
-                                    <h3 className="h5 text-success">Market Trends</h3>
-                                    <p>Stay informed about market trends and current mandi rates</p>
+                                    <h3 className="h5 text-success">{t('crops.market.title')}</h3>
+                                    <p>{t('crops.market.description')}</p>
                                 </div>
                             </div>
                         </div>
@@ -467,7 +467,7 @@ export const Hero = () => {
             {/* Contact Section */}
             <section id="contact" className="py-5 bg-light">
                 <div className="container">
-                    <h2 className="text-center text-success mb-5">Connect With Crop Expert</h2>
+                    <h2 className="text-center text-success mb-5">{t('contact.title')}</h2>
                     <div className="row justify-content-center">
                         <div className="col-lg-8">
                             <div className="card border-success">
