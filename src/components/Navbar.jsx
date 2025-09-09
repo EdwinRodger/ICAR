@@ -79,8 +79,8 @@ export const Navbar = () => {
                     <a ref={brandRef} className="d-flex align-items-center justify-content-center" href="#home">
                         <img src={logo} alt="ICAR Logo" className="me-2" style={{ height: '60px' }} />
                         <div className="text-center">
-                            <h1 className="mb-0">SmartFarm AI</h1>
-                            <p className="mb-0 small">Developed by ICAR-NSRI & IITI under AgriHub Project</p>
+                            <h1 className="mb-0">{t('branding.appName', 'SmartFarm AI')}</h1>
+                            <p className="mb-0 small">{t('branding.developedBy', 'Developed by ICAR-NSRI & IITI under AgriHub Project')}</p>
                         </div>
                         <img src="https://www.iiti.ac.in/public/themes/iitindore/demos/update-logo.png" alt="IITI Logo" className="ms-2" style={{ height: '60px' }} />
                     </a>

@@ -2,6 +2,24 @@
   "language": {
     "title": "Select Language"
   },
+  "branding": {
+    "appName": "SmartFarm AI",
+    "developedBy": "Developed by ICAR-NSRI & IITI under AgriHub Project",
+    "footerAbout": "Developed by ICAR-NSRI and IIT-Indore",
+    "copyright": "SmartFarm AI. All rights reserved. Application developed under AgriHub: Innovation Hub for Agriculture (AI/ML & Deep Learning Center of Excellence) scheme",
+    "connectWithUs": "Connect With Us",
+    "quickLinks": "Quick Links",
+    "resources": "Resources",
+    "stayConnected": "Stay Connected",
+    "newsletterPrompt": "Subscribe to our newsletter for updates and farming tips.",
+    "yourEmail": "Your email",
+    "subscribe": "Subscribe",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "sitemap": "Sitemap",
+    "visitNsri": "Visit ICAR-NSRI Website",
+    "visitIiti": "Visit IIT Indore Website"
+  },
   "nav": {
     "home": "Home"
   },
@@ -94,6 +112,29 @@
       "email": "Your Email",
       "message": "Your Message",
       "submit": "Send Message"
+    }
+  },
+  "footer": {
+    "resources": {
+      "blog": "Blog",
+      "faq": "FAQ",
+      "support": "Support",
+      "api": "API Docs",
+      "download": "Download App"
+    },
+    "nsri": {
+      "name": "ICAR-NSRI (ICAR-National Soybean Research Institute)",
+      "address1": "Khandwa Road, Indore - 452001",
+      "address2": "Madhya Pradesh, India",
+      "phone": "+91-731-2476188",
+      "email": "director.iisr@icar.gov.in"
+    },
+    "iiti": {
+      "name": "IIT Indore (Indian Institute of Technology Indore)",
+      "address1": "Khandwa Road, Simrol, Indore - 453552",
+      "address2": "Madhya Pradesh, India",
+      "phone": "+91-731-6603556",
+      "email": "info@iiti.ac.in"
     }
   }
 } 
