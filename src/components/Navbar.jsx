@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import gsap from 'gsap';
-import logo from '/icar-logo.png';
+// import logo from './icar-logo.png';
 
 export const Navbar = () => {
     const { t, i18n } = useTranslation();
@@ -77,7 +77,7 @@ export const Navbar = () => {
             <div ref={navbarRef} className="bg-success-subtle py-2">
                 <div className="container d-flex flex-column align-items-center">
                     <a ref={brandRef} className="d-flex align-items-center justify-content-center" href="#home">
-                        <img src={logo} alt="ICAR Logo" className="me-2" style={{ height: '60px' }} />
+                        <img src="/icar-logo.png" alt="ICAR Logo" className="me-2" style={{ height: '60px' }} />
                         <div className="text-center">
                             <h1 className="mb-0">{t('branding.appName', 'SmartFarm AI')}</h1>
                             <p className="mb-0 small">{t('branding.developedBy', 'Developed by ICAR-NSRI & IITI under AgriHub Project')}</p>
