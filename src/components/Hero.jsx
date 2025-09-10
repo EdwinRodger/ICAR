@@ -293,6 +293,7 @@ export const Hero = () => {
                             </div>
                         </div>
                         <div className="col-md-4">
+                            <a href="./drone-sop.pdf" target="_blank">
                             <div className="card h-100 border-success feature-card">
                                 <div className="card-body text-center">
                                     <div className="d-flex justify-content-center mb-3">
@@ -300,8 +301,9 @@ export const Hero = () => {
                                     </div>
                                     <h3 className="h5">{t('features.crop.title')}</h3>
                                     <p>{t('features.crop.description')}</p>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div className="col-md-4">
                             <div className="card h-100 border-success feature-card">

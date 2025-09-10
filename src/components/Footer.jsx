@@ -110,8 +110,8 @@ export const Footer = () => {
                             <li className="mb-2"><a href="#blog" className="text-light text-decoration-none">{t('footer.resources.blog', 'Blog')}</a></li>
                             <li className="mb-2"><a href="#faq" className="text-light text-decoration-none">{t('footer.resources.faq', 'FAQ')}</a></li>
                             <li className="mb-2"><a href="#support" className="text-light text-decoration-none">{t('footer.resources.support', 'Support')}</a></li>
-                            <li className="mb-2"><a href="#api" className="text-light text-decoration-none">{t('footer.resources.api', 'API Docs')}</a></li>
-                            <li><a href="#download" className="text-light text-decoration-none">{t('footer.resources.download', 'Download App')}</a></li>
+                            {/* <li className="mb-2"><a href="#api" className="text-light text-decoration-none">{t('footer.resources.api', 'API Docs')}</a></li> */}
+                            <li><a href="https://play.google.com/store/apps/details?id=com.soybean_gyn&hl=en_IN" target="_blank" className="text-light text-decoration-none">{t('footer.resources.download', 'Download App')}</a></li>
                         </ul>
                     </div>
 
